@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>test | 腹痛症</title>
+  <meta name="description" content="{{theme.description}}" />
+  <meta name="keywords" content="{{theme.keywords}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="123456789101112131415161718192021222324// getchar()读入优化 &amp;lt;&amp;lt; 关同步cin &amp;lt;&amp;lt; 此优化// 用isdigit()会小幅变慢namespace Reader &amp;#123;      const int L = (1 &amp;lt;&amp;lt; 15) + 5;      char buffer[L], *S, *T;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://footoredo.cat/test/index.html">
+<meta property="og:site_name" content="腹痛症">
+<meta property="og:description" content="123456789101112131415161718192021222324// getchar()读入优化 &amp;lt;&amp;lt; 关同步cin &amp;lt;&amp;lt; 此优化// 用isdigit()会小幅变慢namespace Reader &amp;#123;      const int L = (1 &amp;lt;&amp;lt; 15) + 5;      char buffer[L], *S, *T;">
+<meta property="og:updated_time" content="2016-08-05T05:14:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="123456789101112131415161718192021222324// getchar()读入优化 &amp;lt;&amp;lt; 关同步cin &amp;lt;&amp;lt; 此优化// 用isdigit()会小幅变慢namespace Reader &amp;#123;      const int L = (1 &amp;lt;&amp;lt; 15) + 5;      char buffer[L], *S, *T;">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <script src="https://use.typekit.net/ymq8wch.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+  <script>setLoadingBarProgress(20)</script>
+  
+  <div id="site-wrapper">
+    
+    <header id="header">
+	<div id="header-wrapper" class="clearfix">
+		<a id="logo" href="/">
+			<img src="/images/logo.png" />
+      </span>
+		</a>
+		<button id="site-nav-switch">
+	    <span class="icon icon-menu"></span>
+	  </button>
+	</div>
+	<aside id="site-menu">
+  	<nav>
+  		
+        <a href="/" class="nav-home nav">
+          Home
+        </a>
+      
+        <a href="/about" class="nav-about nav">
+          About
+        </a>
+      
+    </nav>
+	</aside>
+</header>
+
+    <script>setLoadingBarProgress(40);</script>
+    
+    <main id="main" role="main">
+      <article id="post-test"
+  class="post article white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<h2 class="title">
+  	<a href="/test/">
+    	test
+    </a>
+  </h2>
+	<time>
+	  Aug 5, 2016
+	</time>
+	<section class="content">
+  	<div class="article-entry" itemprop="articleBody">
+    	<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// getchar()读入优化 &lt;&lt; 关同步cin &lt;&lt; 此优化</span></div><div class="line"><span class="comment">// 用isdigit()会小幅变慢</span></div><div class="line"><span class="keyword">namespace</span> Reader &#123;  </div><div class="line">    <span class="keyword">const</span> <span class="keyword">int</span> L = (<span class="number">1</span> &lt;&lt; <span class="number">15</span>) + <span class="number">5</span>;  </div><div class="line">    <span class="keyword">char</span> buffer[L], *S, *T;  </div><div class="line">    <span class="number">__</span><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get_char</span><span class="params">(<span class="keyword">char</span> &amp;ch)</span> </span>&#123;  </div><div class="line">        <span class="keyword">if</span> (S == T) &#123;  </div><div class="line">            T = (S = buffer) + fread(buffer, <span class="number">1</span>, L, <span class="built_in">stdin</span>);  </div><div class="line">            <span class="keyword">if</span> (S == T) &#123;</div><div class="line">				ch = EOF;</div><div class="line">				<span class="keyword">return</span> ;</div><div class="line">			&#125;</div><div class="line">        &#125;  </div><div class="line">		ch = *S++;</div><div class="line">    &#125;  </div><div class="line">    <span class="number">__</span><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get_int</span><span class="params">(<span class="keyword">int</span> &amp;x)</span> </span>&#123;  </div><div class="line">		<span class="keyword">char</span> ch; <span class="keyword">bool</span> neg = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (; get_char(ch), ch &lt; <span class="string">'0'</span> || ch &gt; <span class="string">'9'</span>; ) neg ^= ch == <span class="string">'-'</span>;</div><div class="line">		x = ch - <span class="string">'0'</span>;</div><div class="line">		<span class="keyword">for</span> (; get_char(ch), ch &gt;= <span class="string">'0'</span> &amp;&amp; ch &lt;= <span class="string">'9'</span>; ) </div><div class="line">			x = x * <span class="number">10</span> + ch - <span class="string">'0'</span>;</div><div class="line">		<span class="keyword">if</span> (neg) x = -x;</div><div class="line">    &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我来 have a try on 中英文混排。Time complexity $O(1)$.<br>$$ \sum_{i=1}^{n}a_i^{\epsilon + k} $$</p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+		  
+        <a class="tag-link" href="/tags/test/">test</a>
+      
+	  </div>
+	</section>
+</article>
+
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </main>
+    
+    <footer id="footer" class="clearfix">
+  
+  
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="mailto:footoredo@gmail.com" class="social email"
+          target="_blank" rel="external">
+          <span class="icon icon-email"></span>
+        </a>
+      
+        <a href="https://github.com/footoredo" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="https://twitter.com/footoredo" class="social twitter"
+          target="_blank" rel="external">
+          <span class="icon icon-twitter"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <span class="codename">Typescript</span> designed by <a href="http://rakugaki.me/" target="_blank">Art Chen</a>.</div>
+  <div>&copy; <a href="/">腹痛症</a></div>
+  
+</footer>
+
+
+    <script>setLoadingBarProgress(80);</script>
+    
+  </div>
+
+  
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+
+<script src="/js/jquery.fitvids.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+</body>
+</html>
