@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>Codeforces Surprise Language Round #7 通关指南 | 腹痛症</title>
+  <meta name="description" content="{{theme.description}}" />
+  <meta name="keywords" content="{{theme.keywords}}" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Surprise Language Round #7用的语言是false，有关这门语言的资料可以在这场比赛的Announcement里找到链接。false的神奇之处在于它的编译器（解释器？）大小仅有数K，代价就是这门语言用起来蛋疼无比，写代码就像是在开垦荒地一样，什么都要自己写……好不容易把这场比赛8个题全都做完，于是决定写一个通关指南，来纪念这个挺有意思的语言。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Surprise Language Round #7 通关指南">
+<meta property="og:url" content="http://footoredo.cat/Codeforces-Surprise-Language-Round-7-通关指南/index.html">
+<meta property="og:site_name" content="腹痛症">
+<meta property="og:description" content="Surprise Language Round #7用的语言是false，有关这门语言的资料可以在这场比赛的Announcement里找到链接。false的神奇之处在于它的编译器（解释器？）大小仅有数K，代价就是这门语言用起来蛋疼无比，写代码就像是在开垦荒地一样，什么都要自己写……好不容易把这场比赛8个题全都做完，于是决定写一个通关指南，来纪念这个挺有意思的语言。">
+<meta property="og:updated_time" content="2016-08-12T11:39:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Codeforces Surprise Language Round #7 通关指南">
+<meta name="twitter:description" content="Surprise Language Round #7用的语言是false，有关这门语言的资料可以在这场比赛的Announcement里找到链接。false的神奇之处在于它的编译器（解释器？）大小仅有数K，代价就是这门语言用起来蛋疼无比，写代码就像是在开垦荒地一样，什么都要自己写……好不容易把这场比赛8个题全都做完，于是决定写一个通关指南，来纪念这个挺有意思的语言。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <script src="https://use.typekit.net/ymq8wch.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+  
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+  <script>setLoadingBarProgress(20)</script>
+  
+  <div id="site-wrapper">
+    
+    <header id="header">
+	<div id="header-wrapper" class="clearfix">
+		<a id="logo" href="/">
+			<img src="/images/logo.png" />
+      </span>
+		</a>
+		<button id="site-nav-switch">
+	    <span class="icon icon-menu"></span>
+	  </button>
+	</div>
+	<aside id="site-menu">
+  	<nav>
+  		
+        <a href="/" class="nav-home nav">
+          Home
+        </a>
+      
+        <a href="/about" class="nav-about nav">
+          About
+        </a>
+      
+    </nav>
+	</aside>
+</header>
+
+    <script>setLoadingBarProgress(40);</script>
+    
+    <main id="main" role="main">
+      <article id="post-Codeforces-Surprise-Language-Round-7-通关指南"
+  class="post article white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<h2 class="title">
+  	<a href="/Codeforces-Surprise-Language-Round-7-通关指南/">
+    	Codeforces Surprise Language Round #7 通关指南
+    </a>
+  </h2>
+	<time>
+	  Aug 12, 2016
+	</time>
+	<section class="content">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p><a href="http://codeforces.com/contest/470" target="_blank" rel="external">Surprise Language Round #7</a>用的语言是false，有关这门语言的资料可以在这场比赛的Announcement里找到链接。false的神奇之处在于它的编译器（解释器？）大小仅有数K，代价就是这门语言用起来蛋疼无比，写代码就像是在开垦荒地一样，什么都要自己写……好不容易把这场比赛8个题全都做完，于是决定写一个通关指南，来纪念这个挺有意思的语言。</p>
+<a id="more"></a>
+<h2 id="读入整数"><a href="#读入整数" class="headerlink" title="读入整数"></a>读入整数</h2><p>用false写hello world无比轻松，于是你就想写一个A+B……然而，false并不支持读入整数，只支持读入一个字符……但这显然难不倒会写读入优化的我。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[$&apos;01-&gt;&apos;91+@&gt;&amp;]d:  &#123; isdigit() &#125;</div><div class="line">[^$d;!$[\&apos;0-@10*+r;!\]?~[%]?]r:  &#123; readint() &#125;</div><div class="line"> </div><div class="line">0r;!x:  &#123; input x &#125;</div></pre></td></tr></table></figure>
+<h2 id="如何写函数"><a href="#如何写函数" class="headerlink" title="如何写函数"></a>如何写函数</h2><p>写到这里，觉得有必要分享一下用false写一个函数的方法。我认为需要保证的一点原则是不要改动参数。false程序基于堆栈，这就需要时刻对当前栈中有哪些元素保持了解，尤其是它并不支持交换任意两个元素，保持栈中元素有序便显得尤为重要。我一般在写一个函数时，会将它的参数列表写在草稿纸上，例如读入整数的函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">last_x -&gt; last_x ch -&gt; last_x ch - &apos;0&apos; -&gt; </div><div class="line">ch - &apos;0&apos; last_x * 10 -&gt; </div><div class="line">x = (last_x * 10 + (ch - &apos;0&apos;))</div></pre></td></tr></table></figure>
+<p>这便完成一个完整的循环。</p>
+<h2 id="如何写循环"><a href="#如何写循环" class="headerlink" title="如何写循环"></a>如何写循环</h2><p>其实false写循环很容易，但我一开始以为变量不能多次赋值，就把迭代器直接扔到栈里面去了，每次都要算好久……其实只要像一般程序一样开个变量叫i，每次+1之类的就行了……</p>
+<h2 id="有关数组"><a href="#有关数组" class="headerlink" title="有关数组"></a>有关数组</h2><p>false的文档里提供了一个嵌入汇编的方法来使用数组，但是cf提供的解释器好像不支持……但是false有一个神奇的函数（功能？）叫做ø（在cf的解释器里它被替换成了大写O），作用是把栈中第x个元素复制出来，那么栈就基本上可以当做数组用了，只不过它不支持修改元素……还有一种实现数组的方法是直接用26个字母来当数组的每一位（当然只适用于数组元素很少的情况），然后……写个程序生成一下你的false代码……如果数组大小不满26的话可以在对应的变量中放入-1之类的占位符。</p>
+
+  	</div>
+	  
+	  <div class="article-tags tags">
+		  
+        <a class="tag-link" href="/tags/Codeforces/">Codeforces</a><a class="tag-link" href="/tags/false-programming-language/">false programming language</a>
+      
+	  </div>
+	</section>
+</article>
+
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </main>
+    
+    <footer id="footer" class="clearfix">
+  
+  
+
+	<div class="social-wrapper">
+  	
+      
+        <a href="mailto:footoredo@gmail.com" class="social email"
+          target="_blank" rel="external">
+          <span class="icon icon-email"></span>
+        </a>
+      
+        <a href="https://github.com/footoredo" class="social github"
+          target="_blank" rel="external">
+          <span class="icon icon-github"></span>
+        </a>
+      
+        <a href="https://twitter.com/footoredo" class="social twitter"
+          target="_blank" rel="external">
+          <span class="icon icon-twitter"></span>
+        </a>
+      
+        <a href="/atom.xml" class="social rss"
+          target="_blank" rel="external">
+          <span class="icon icon-rss"></span>
+        </a>
+      
+    
+  </div>
+  
+  <div>Theme <span class="codename">Typescript</span> designed by <a href="http://rakugaki.me/" target="_blank">Art Chen</a>.</div>
+  <div>&copy; <a href="/">腹痛症</a></div>
+  
+</footer>
+
+
+    <script>setLoadingBarProgress(80);</script>
+    
+  </div>
+
+  
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+
+<script src="/js/jquery.fitvids.js"></script>
+<script src="/js/app.js"></script>
+
+
+  <script>setLoadingBarProgress(100);</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+</body>
+</html>
